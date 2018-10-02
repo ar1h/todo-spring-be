@@ -178,7 +178,7 @@ node {
     stage('Vegeta based stress testing'){
         sh """
             #make sure vegeata is available - https://github.com/tsenart/vegeta
-            echo "curl -H content-type:application/json http://localhost:8080/api/todolist" | ./vegeta attack -duration=60s -rate=200 -keepalive=false | tee results.bin | ./vegeta report
+            echo "curl -H content-type:application/json http://localhost:8080/api/todolist" | vegeta attack -duration=60s -rate=200 -keepalive=false | tee results.bin | vegeta report
         """
     }
 
