@@ -22,7 +22,7 @@ def appVersion
 def gitCommitId
 def noProxyHosts
 
-def LOCATION = "https://github.com/masoodfaisal/todo-spring-be.git"
+def LOCATION = "https://github.com/ar1h/todo-spring-be.git"
 
 /*
 node('maven') {
