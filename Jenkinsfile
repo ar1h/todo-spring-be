@@ -135,9 +135,9 @@ node('maven') {
     //TODO
     stage('Start local container build'){
         //build container using dockerfile and scan them before pushing them to the registry
+        //make sure that the hard coded jar is there
         sh """
                 echo 'Container is not built from source code, yet. Build it manually using the command below - TODO'
-                #make sure that the hard coded jar is there
                 docker build -t spring-todo-be:1.0 .
            """
     }
