@@ -149,7 +149,6 @@ node('maven') {
     }
     */
     //Faisal Masood prefer this instead of the openscap scan
-/*
     stage('Clair based container scan'){
         sh """
             ./clair-scanner_darwin_amd64.dms -c http://localhost:6060 --ip $(hostname) --report container.json  spring-todo-be:1.0 || true
@@ -157,8 +156,7 @@ node('maven') {
         
         
     }
-*/
-/*
+    
     //TODO
     stage('OWASP ZAP scan for api'){
         //build container using dockerfile and scan them before pushing them to the registry
@@ -169,7 +167,6 @@ node('maven') {
             docker run -v $(pwd):/zap/wrk/:rw owasp/zap2docker-stable zap-baseline.py -g baseline-scan.conf  -t http://$(ifconfig en0 | grep "inet " | cut -d " " -f2):8080/api/todolist
         """
     }
-*/
 
     stage('Vegeta based stress testing'){
         sh """
