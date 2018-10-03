@@ -164,7 +164,7 @@ node('maven') {
             #make sure that application is running locally - later this will be docker based e.g.
             #the example app needs mongo also running locally - later this will be docker based
             #https://github.com/zaproxy/zaproxy/wiki/ZAP-Baseline-Scan
-            docker run -v $(pwd):/zap/wrk/:rw owasp/zap2docker-stable zap-baseline.py -g baseline-scan.conf  -t http://$(ifconfig en0 | grep "inet " | cut -d " " -f2):8080/api/todolist
+            docker run -v \$(pwd):/zap/wrk/:rw owasp/zap2docker-stable zap-baseline.py -g baseline-scan.conf  -t http://\$(ifconfig en0 | grep "inet " | cut -d " " -f2):8080/api/todolist
         """
     }
 
