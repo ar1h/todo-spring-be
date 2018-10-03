@@ -159,6 +159,7 @@ node('maven') {
     */
 
     //TODO
+    /*
     stage('OWASP ZAP scan for api'){
         //build container using dockerfile and scan them before pushing them to the registry
         sh """
@@ -168,6 +169,7 @@ node('maven') {
             docker run -v \$(pwd):/zap/wrk/:rw owasp/zap2docker-stable zap-baseline.py -g baseline-scan.conf  -t http://\$(ifconfig en0 | grep "inet " | cut -d " " -f2):8080/api/todolist
         """
     }
+    */
 
     stage('Vegeta based stress testing'){
         sh """
