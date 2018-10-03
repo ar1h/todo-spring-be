@@ -24,11 +24,7 @@ def noProxyHosts
 
 def LOCATION = "https://github.com/ar1h/todo-spring-be.git"
 
-/*
 node('maven') {
-*/
-node {
-
 
 
     stage('Checkout'){
