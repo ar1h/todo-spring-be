@@ -151,7 +151,7 @@ node('maven') {
     //Faisal Masood prefer this instead of the openscap scan
     stage('Clair based container scan'){
         sh """
-            ./clair-scanner_darwin_amd64.dms -c http://localhost:6060 --ip $(hostname) --report container.json  spring-todo-be:1.0 || true
+            ./clair-scanner_darwin_amd64.dms -c http://localhost:6060 --ip \$(hostname) --report container.json  spring-todo-be:1.0 || true
         """
         
         
